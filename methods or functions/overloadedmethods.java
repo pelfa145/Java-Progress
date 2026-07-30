@@ -4,7 +4,7 @@ public class overloadedmethods{
         try(Scanner input = new Scanner(System.in)){
         while(true){
             System.out.println("****************\nBanking Program\n****************\n1. Show Balance\n2. Deposit\n3. Withdraw\n4. Exit\n****************");      
-            System.out.print("Enter your choice(1-4)");
+            System.out.print("Enter your choice(1-4): ");
             int choice;
             choice = input.nextInt();
 
