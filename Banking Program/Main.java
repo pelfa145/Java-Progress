@@ -2,20 +2,20 @@ import java.util.Scanner;
 
 public class Main {
     static double balance = 0.00;
-
+    static Scanner scanner = new Scanner(System.in);
     public static void main(String[] args) {
-        try (Scanner scanner = new Scanner(System.in)) {
-            print("Hello, World");
 
-            showMenu(scanner);
-        }
+        print("Hello, World");
+
+        showMenu();
+
     }
 
     static void print(String string) {
         System.out.println(string);
     }
 
-    static void showMenu(Scanner scanner) {
+    static void showMenu() {
 
         int choice = 0;
         print("Hello bruh");
@@ -27,9 +27,9 @@ public class Main {
                 case 1 ->
                     showBalance();
                 case 2 ->
-                    depositMoney(scanner);
+                    depositMoney();
                 case 3 ->
-                    withdrawMoney(scanner);
+                    withdrawMoney();
                 case 4 ->
                     print("Bye");
                 default ->
@@ -42,7 +42,7 @@ public class Main {
         System.out.printf("Your balance is currently: %.2f$\n", balance);
     }
 
-    static void depositMoney(Scanner scanner) {
+    static void depositMoney() {
 
         System.out.print("How much money do you want to deposit? in $: ");
         double input = scanner.nextDouble();
@@ -50,7 +50,7 @@ public class Main {
 
     }
 
-    static void withdrawMoney(Scanner scanner) {
+    static void withdrawMoney() {
         System.out.print("How much money do you want to withdraw?: ");
         double input = scanner.nextDouble();
         balance = balance - input;
