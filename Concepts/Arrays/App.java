@@ -1,4 +1,3 @@
-import java.util.Arrays;
 
 public class App {
     public static void main(String[] args) {
@@ -99,8 +98,6 @@ public class App {
     }
 
     public static int binarySearch1(int[] arr, int target){
-
-
         return -1;
     }
 }
