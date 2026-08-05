@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/2D Arrays" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Arrays" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Constructs" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/OBJECT ORIENTED PROGRAMMINGG FINALLY" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/enhanced switches" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/for loops" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/logical operators" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/methods or functions" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/nested loops" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/nestedifstatements" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/pseudo" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/string methods" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/ternary operators" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/while loops" isTestSource="false" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>
