@@ -6,7 +6,7 @@ import java.util.Random;
 public class App {
     static int balance = 100;
     static Random random = new Random();
-
+    
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
@@ -15,7 +15,7 @@ public class App {
                 {"⭐", "🔔", "🍋", "🍉", "🍒"},
                 {"🍉", "🍒", "⭐", "🍋", "🔔"}
         };
-
+        
         while (true) {
             System.out.println("Welcome to Java Slots");
             System.out.println("Current balance: $" + balance);
