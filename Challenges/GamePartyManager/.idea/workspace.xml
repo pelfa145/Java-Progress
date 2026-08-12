@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="77a35280-c793-45e4-8570-c61b910e5e38" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../codecrafters-shell-java" beforeDir="false" afterPath="$PROJECT_DIR$/../codecrafters-shell-java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Mini Projects/Banking program oop/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Mini Projects/Banking program oop/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Mini Projects/Banking program oop/out/production/Banking program oop/BankAccount.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../Mini Projects/Banking program oop/out/production/Banking program oop/BankAccount.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Mini Projects/Banking program oop/out/production/Banking program oop/BankHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../Mini Projects/Banking program oop/out/production/Banking program oop/BankHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Mini Projects/Banking program oop/out/production/Banking program oop/Database.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../Mini Projects/Banking program oop/out/production/Banking program oop/Database.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Mini Projects/Banking program oop/out/production/Banking program oop/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../Mini Projects/Banking program oop/out/production/Banking program oop/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Mini Projects/Banking program oop/src/BankAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Mini Projects/Banking program oop/src/BankAccount.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Mini Projects/Banking program oop/src/BankHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Mini Projects/Banking program oop/src/BankHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Mini Projects/Banking program oop/src/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Mini Projects/Banking program oop/src/Database.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Mini Projects/Banking program oop/src/InputHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Mini Projects/Banking program oop/src/InputHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Mini Projects/Banking program oop/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Mini Projects/Banking program oop/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Mini Projects/RPG Game/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Mini Projects/RPG Game/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Mini Projects/RPG Game/src/abstracts/Character.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Mini Projects/RPG Game/src/abstracts/Character.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Mini Projects/RPG Game/src/abstracts/characters/Archer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Mini Projects/RPG Game/src/abstracts/characters/Mage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Mini Projects/RPG Game/src/abstracts/characters/Warrior.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Mini Projects/Student Management OOP/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Mini Projects/Student Management OOP/.idea/OOP Playground.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Mini Projects/Student Management OOP/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Mini Projects/Student Management OOP/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Mini Projects/Student Management OOP/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Mini Projects/Student Management OOP/InputHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Mini Projects/Student Management OOP/InputHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Mini Projects/Student Management OOP/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Mini Projects/Student Management OOP/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Mini Projects/Student Management OOP/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Mini Projects/Student Management OOP/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Mini Projects/Student Management OOP/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Mini Projects/Student Management OOP/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Mini Projects/Student Management OOP/StudentManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Mini Projects/Student Management OOP/StudentManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Mini Projects/Student Management but JAVA it sucks/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Mini Projects/Student Management but JAVA it sucks/.idea/workspace.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;pelfa145&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/pelfa145/Java-Progress.git&quot;,
+    &quot;accountId&quot;: &quot;f4d0e0d9-f49a-4573-89b1-7996712fbb5b&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2,
+  &quot;fromUser&quot;: false
+}</component>
+  <component name="ProjectId" id="3HoKaz53kBEmTrTroyZwiEheotg" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "git-widget-placeholder": "main",
+    "junie.onboarding.icon.badge.shown": "true",
+    "kotlin-language-version-configured": "true",
+    "nodejs_package_manager_path": "npm",
+    "onboarding.tips.debug.path": "C:/Users/Jadon Paran/Documents/Programming/java/Challenges/GamePartyManager/src/main/java/org/project/Main.java",
+    "to.speed.mode.migration.done": "true"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration default="true" type="GroovyScriptRunConfiguration" factoryName="Groovy">
+      <setting name="path" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workDir" value="file://$PROJECT_DIR$" />
+      <setting name="debug" value="false" />
+      <setting name="addClasspath" value="true" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-30f59d01ecdd-63390994e64e-intellij.indexing.shared.core-IU-262.8665.337" />
+        <option value="bundled-js-predefined-d6986cc7102b-4abd2a77f808-JavaScript-IU-262.8665.337" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="77a35280-c793-45e4-8570-c61b910e5e38" name="Changes" comment="" />
+      <created>1786529051720</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1786529051720</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/project/Main.java</url>
+          <line>13</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
