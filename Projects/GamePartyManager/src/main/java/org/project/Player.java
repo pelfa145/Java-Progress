@@ -13,8 +13,12 @@ public class Player {
         this.username = username;
     }
 
-
-
+    //getters
+    int getId(){return id;}
+    int getHealth(){return health;}
+    int getLevel(){return level;}
+    String getUsername(){return username;}
+    //setters
     void takeDamage(int amount){
         this.health -= amount;
         System.out.println(this.username+" took "+amount+" Damage! Remaining HP: "+this.health);
@@ -29,15 +33,6 @@ public class Player {
     }
     void displayStats(){
         System.out.println(this.username+"\nHP: "+this.health+"\nLevel: "+this.level);
-    }
-
-    //getters
-    int getId(){return id;}
-    int getHealth(){return health;}
-    int getLevel(){return level;}
-    String getUsername(){return username;}
-    //setters
-    void setUsername(String newUser){
     }
 
 
