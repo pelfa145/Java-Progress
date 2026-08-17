@@ -1,38 +1,27 @@
-import java.io.File;
-import java.util.InputMismatchException;
 import java.util.Scanner;
 public class InputHandler {
     static Scanner input = new Scanner(System.in);
     static FileHandler files = new FileHandler();
-    void deleteTask(){
-
-        System.out.print("Delete task -> ");
-        String task = input.nextLine();
-        files.deleteTask(task);
-    }
-
-    void viewTask(){
-        files.viewTasks();
+    int returnInt(){
+        int integer = input.nextInt();
+        input.nextLine();
+        return integer;
     }
 
     void addTask(){
-        System.out.print("Task -> ");
+        System.out.print("Add a task -> ");
         String task = input.nextLine();
         files.addTask(task);
     }
-
-    int returnInt(){
-        try {
-            int Int = input.nextInt();
-            input.nextLine();
-            return Int;
-        }
-        catch (InputMismatchException e){
-            return -1;
-        }
+    void closeFiles(){
+        files.close();
     }
-
-    void close(){
-        input.close();
+    void print(){
+        files.printTasks();
+    }
+    void deleteTask(){
+        System.out.print("Enter task to delete: ");
+        String task = input.nextLine();
+        files.deleteTask(task);
     }
 }

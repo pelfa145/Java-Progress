@@ -1,65 +1,62 @@
 import java.io.*;
+import java.util.ArrayList;
+
 public class FileHandler {
-    private static FileWriter notes;
+    private static FileWriter list;
     static{
-        try{
-           notes = new FileWriter("Todo.txt", true);
-        }
-        catch(IOException e){
-            System.out.println("Something went wrong please try again.");
-        }
-    }
-
-    private BufferedReader reader() throws IOException{
-        return new BufferedReader(new FileReader("Todo.txt"));
-    }
-
-    void addTask(String task){
-        try{
-        notes.write(task+"\n");
-        notes.flush();
-        }
-        catch (IOException e){
+       try{
+            list = new FileWriter("todolist.txt", true);
+        }catch (IOException e){
             System.out.println("Something went wrong.");
         }
     }
-
-    void viewTasks(){
+    void addTask(String task){
         try{
-            BufferedReader filereader = reader();
-            String line;
-            while((line = filereader.readLine()) != null){
-                System.out.println("★ "+line);
-            }
-            reader().close();
+            list.write(task+"\n");
+            list.flush();
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
     }
-    void deleteTask(String taskToDelete){
+    void close(){
         try{
-            FileWriter rewrite = new FileWriter("Todo.txt");
-            BufferedReader filereader = reader();
-            String line;
-            boolean found = false;
-            while((line= filereader.readLine())!=null){
-                if(!line.equalsIgnoreCase(taskToDelete)){
-                rewrite.write(line);
-                found = true;
-                }else{
-                    continue;
-                }
-                reader().close();
-            }
-            if(!found){
-                System.out.println("Task not found.");
-            }
-            rewrite.close();
+            list.close();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
         }
-        catch (IOException e){
-            System.out.println("Something went wrong.");
+    }
+    void printTasks(){
+        try{
+
+            BufferedReader reader = new BufferedReader(new FileReader("todolist.txt"));
+            String task;
+            while((task = reader.readLine())!= null){
+                System.out.println("-"+task);
+            }
+            reader.close();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
         }
     }
 
-
+    void deleteTask(String taskToDelete){
+        try{
+            ArrayList<String> lines = new ArrayList<>();
+            BufferedReader reader = new BufferedReader(new FileReader("todolist.txt"));
+            String task;
+            while((task = reader.readLine())!= null){
+                if(!task.equalsIgnoreCase(taskToDelete)){
+                    lines.add(task);
+                }
+            }
+            reader.close();
+            FileWriter writer = new FileWriter("todolist.txt");
+            for (String tasks : lines){
+                writer.write(tasks + "\n");
+            }
+            writer.close();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
 }
