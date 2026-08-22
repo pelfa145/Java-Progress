@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b3a5a918-d5b7-4cd3-91a5-84768cf2d488" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SQL.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../Challenges/codecrafters-shell-java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Challenges/codecrafters-shell-java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../Projects/RPG Game" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Projects/RPG Game" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../Projects/Student Management OOP" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Projects/Student Management OOP" afterDir="false" />
@@ -16,10 +14,22 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 7,
-  "fromUser": false
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "pelfa145"
+  }
 }]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/pelfa145/Java-Progress.git",
+    "accountId": "f4d0e0d9-f49a-4573-89b1-7996712fbb5b"
+  }
+}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7,
+  &quot;fromUser&quot;: false
+}</component>
   <component name="ProjectId" id="3I2wNhJujCm8UPZOMgWXtj2F3h6" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -29,6 +39,7 @@
   "keyToString": {
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "codeWithMe.voiceChat.enabledByDefault": "false",
     "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
