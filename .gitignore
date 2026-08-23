@@ -1,0 +1,6 @@
+# IDE & System Files
+.idea/
+*.iml
+out/
+target/
+.DS_Store
