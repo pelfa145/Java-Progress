@@ -4,8 +4,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 public class FileHandling{
-    static FileWriter write;
-
+    static FileWriter writer;
 
     static void loadFile(HashMap<Integer, Student> getStudents) throws IOException{
         try(BufferedReader reader = new BufferedReader(new FileReader("students.txt"))){
@@ -18,13 +17,19 @@ public class FileHandling{
                 String course = lf[3];
                 int yearLvl = Integer.parseInt(lf[4]);
                 int ID = Integer.parseInt(lf[5]);
-                getStudents.put(ID, new Student(first, last, age, course, yearLvl, ID));
+                System.out.println(first+" "+last+age+course+yearLvl+ID);
+                Main.db.addStudents(first, last, age, course, yearLvl, ID);
             }
         }catch (FileNotFoundException e){
-            write = new FileWriter("students.txt");
-            write.write("Initialized.");
-            write.close();
+            writer = new FileWriter("students.txt");
+            writer.write("Initialized.");
+            writer.close();
         }
+
+    }
+    static void saveFile(HashMap<Integer, Student> getStudents) throws IOException {
+       writer = new FileWriter("students.txt");
+
 
     }
 }

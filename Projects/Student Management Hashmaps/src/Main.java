@@ -4,9 +4,7 @@ public class Main{
     public static void main(String[] args) {
         try {
             FileHandling.loadFile(db.getStudents());
-        } catch (IOException e) {
-//            throw new RuntimeException(e);
-        }
+        } catch (IOException e) {}
         InputHandler.showMenu();
         InputHandler.close();
     }

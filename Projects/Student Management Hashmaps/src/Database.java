@@ -7,7 +7,7 @@ public class Database {
     }
 
     public void addStudent(){
-
+// the load file aint working properly, fix it.
         System.out.print("Enter student name(LastName, FirstName): ");
 
         String name = InputHandler.returnString();
@@ -29,6 +29,9 @@ public class Database {
 
         getStudents().put(id, new Student(first, last, age, course, yearLvl, id));
 
+    }
+    public void addStudents(String first, String last, int age, String course, int yearLvl, int id){
+        getStudents().put(id, new Student(first, last, age, course, yearLvl, id));
     }
 
     int generateID(){
