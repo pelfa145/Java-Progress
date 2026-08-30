@@ -3,13 +3,13 @@ import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-public class FileHandling{
+public class FileHandling {
     static FileWriter writer;
 
-    static void loadFile(HashMap<Integer, Student> getStudents) throws IOException{
-        try(BufferedReader reader = new BufferedReader(new FileReader("students.txt"))){
+    static void loadFile(HashMap<Integer, Student> getStudents) throws IOException {
+        try (BufferedReader reader = new BufferedReader(new FileReader("students.txt"))) {
             String line;
-            while((line = reader.readLine())!=null){
+            while ((line = reader.readLine()) != null) {
                 String[] lf = line.split("\\|");
                 String first = lf[0];
                 String last = lf[1];
@@ -17,19 +17,22 @@ public class FileHandling{
                 String course = lf[3];
                 int yearLvl = Integer.parseInt(lf[4]);
                 int ID = Integer.parseInt(lf[5]);
-                System.out.println(first+" "+last+age+course+yearLvl+ID);
+                System.out.println(first + " " + last + age + course + yearLvl + ID);
                 Main.db.addStudents(first, last, age, course, yearLvl, ID);
             }
-        }catch (FileNotFoundException e){
+        } catch (FileNotFoundException e) {
             writer = new FileWriter("students.txt");
             writer.write("Initialized.");
             writer.close();
         }
-
     }
+
     static void saveFile(HashMap<Integer, Student> getStudents) throws IOException {
-       writer = new FileWriter("students.txt");
-
-
+        writer = new FileWriter("students.txt");
+        for (Student student : Main.db.getStudents().values()) {
+            writer.write(student.saveStudent());
+        }
+        writer.flush();
+        writer.close();
     }
 }

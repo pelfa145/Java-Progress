@@ -11,7 +11,7 @@ public class Database {
         System.out.print("Enter student name(LastName, FirstName): ");
 
         String name = InputHandler.returnString();
-        String[] nameParts = name.split(",");
+        String[] nameParts = name.split(", ");
 
         String last = nameParts[0];
         String first = nameParts[1];
@@ -44,6 +44,10 @@ public class Database {
     public void printStudentInfo(){
         System.out.print("Enter Student ID: ");
         int id = InputHandler.returnInt();
-        getStudents().get(id).printStudent();
+        try{getStudents().get(id).printStudent();
+        }
+        catch (NullPointerException e){
+            System.out.println("Student Not Found.");
+        }
     }
 }

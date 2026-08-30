@@ -1,4 +1,6 @@
 import javax.xml.crypto.Data;
+import java.io.File;
+import java.io.IOException;
 import java.util.Scanner;
 public class InputHandler {
     static Scanner input = new Scanner(System.in);
@@ -10,8 +12,18 @@ public class InputHandler {
             int choice = returnInt();
 
             switch (choice){
-                case 1 -> Main.db.addStudent();
-                case 2 -> Main.db.printStudentInfo();
+                case 1 -> {
+                    Main.db.addStudent();
+                    try{FileHandling.saveFile(Main.db.getStudents());} catch (IOException e) {
+                        System.out.println("Something went wrong.");
+                    }
+                }
+                case 2 -> {
+                    Main.db.printStudentInfo();
+                    try{FileHandling.saveFile(Main.db.getStudents());} catch (IOException e) {
+                        System.out.println("Something went wrong.");
+                    }
+                }
                 case 3 -> {}
                 case 4 -> {}
                 case 5 -> {}

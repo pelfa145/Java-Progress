@@ -7,5 +7,6 @@ public class Main{
         } catch (IOException e) {}
         InputHandler.showMenu();
         InputHandler.close();
+
     }
 }
