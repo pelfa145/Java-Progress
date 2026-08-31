@@ -1,6 +1,4 @@
 import java.io.*;
-import java.lang.reflect.Array;
-import java.util.ArrayList;
 import java.util.HashMap;
 
 public class FileHandling {
@@ -29,7 +27,7 @@ public class FileHandling {
 
     static void saveFile(HashMap<Integer, Student> getStudents) throws IOException {
         writer = new FileWriter("students.txt");
-        for (Student student : Main.db.getStudents().values()) {
+        for (Student student : getStudents.values()) {
             writer.write(student.saveStudent());
         }
         writer.flush();
