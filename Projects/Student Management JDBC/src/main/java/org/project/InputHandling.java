@@ -12,8 +12,17 @@ public class InputHandling {
             int choice = returnInt();
             switch(choice){
                 case 1 -> addStudent();
-                case 2 -> {}
-                case 3 -> {}
+                case 2 -> {
+                try{printStudent();} catch (SQLException e) {
+                    throw new RuntimeException(e);
+                }}
+                case 3 -> {
+                    try{
+                        deleteStudent();
+                    } catch (SQLException e) {
+                        throw new RuntimeException(e);
+                    }
+                }
                 case 4 -> {}
                 case 5 -> quit = true;
             }
@@ -50,6 +59,16 @@ public class InputHandling {
         try{StudentRepository.insertStudent(newStudent);} catch (SQLException e) {
             throw new RuntimeException(e);
         }
+    }
+    static void printStudent() throws SQLException{
+        System.out.print("Enter students ID: ");
+        int studentID = returnInt();
+        StudentRepository.printStudent(studentID);
+    }
+    static void deleteStudent()throws SQLException{
+        System.out.println("Enter students ID: ");
+        int studentID = returnInt();
+        StudentRepository.deleteStudent(studentID);
     }
 }
 

@@ -1,10 +1,18 @@
 package org.project;
 
+import lombok.Setter;
+
 public class Student {
+    //setters
+    @Setter
     private String first;
+    @Setter
     private String last;
+    @Setter
     private int age;
+    @Setter
     private String course;
+    @Setter
     private int yearLevel;
     private final int studentID;
 
@@ -23,10 +31,5 @@ public class Student {
     public String getCourse(){return this.course;}
     public int getAge(){return this.age;}
     public int getYearLevel(){return this.yearLevel;}
-    //setters
-    public void setFirst(String newFirst){this.first = newFirst;}
-    public void setLast(String newLast){this.last = newLast;}
-    public void setAge(int newAge){this.age = newAge;}
-    public void setCourse(String newCourse){this.course = newCourse;}
-    public void setYearLevel(int newYearLevel){this.yearLevel = newYearLevel;}
+
 }

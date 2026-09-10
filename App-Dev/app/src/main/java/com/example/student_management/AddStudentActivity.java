@@ -35,7 +35,7 @@ public class AddStudentActivity extends Activity {
             String course = etCourse.getText().toString();
             int yearLevel = Integer.parseInt(etYearLevel.getText().toString().trim());
             boolean isEnabled = switchStatus.isChecked();
-
+            //create a database first and then before adding into an arraylist or a hashmap even
         });
     }
 }
