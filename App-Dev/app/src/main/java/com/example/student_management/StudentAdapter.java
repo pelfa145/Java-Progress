@@ -1,5 +1,7 @@
+/*
 package com.example.student_management;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -19,3 +21,4 @@ public class StudentAdapter extends RecyclerView.Adapter<StudentAdapter.StudentV
 
     }
 }
+*/

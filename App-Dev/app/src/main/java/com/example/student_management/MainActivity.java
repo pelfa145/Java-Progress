@@ -15,6 +15,7 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
+
     public static ArrayList<Student> students = new ArrayList<>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,9 +31,19 @@ public class MainActivity extends AppCompatActivity {
         btnAddStudent.setOnClickListener(v-> {
         Intent intent = new Intent(MainActivity.this, AddStudentActivity.class);
         startActivity(intent);
+        updateTotalStudents(tvActiveStudents);
         });
         btnViewStudents.setOnClickListener(v -> {
         Intent intent = new Intent(this, ViewStudents.class);
         });
+    }
+
+    void updateTotalStudents(TextView tvActiveStudents){
+        int totalStudents = students.size();
+        tvActiveStudents.setText(totalStudents);
+    }
+
+    public void setUpdateStudents(){
+
     }
 }
