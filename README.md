@@ -3,6 +3,8 @@ Bout to start app-dev
 
 started app dev and im cooked
 
+codefest reduced to 3 people
+
 Note: Started on july 28
 
 
