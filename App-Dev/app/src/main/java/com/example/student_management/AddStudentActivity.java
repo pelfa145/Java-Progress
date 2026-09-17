@@ -1,7 +1,5 @@
 package com.example.student_management;
 
-import static com.example.student_management.MainActivity.students;
-
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -37,7 +35,7 @@ public class AddStudentActivity extends Activity {
             boolean status = switchStatus.isChecked();
             //create a database first and then before adding into an arraylist or a hashmap even
             int studentID = generateID();
-            try{students.add(new Student(first,last, course, age, yearLevel, studentID, status));}catch(Exception e){
+            try{StudentRepository.getStudents().add(new Student(first,last, course, age, yearLevel, studentID, status));}catch(Exception e){
                 Toast.makeText(this, "Failed to add student.", Toast.LENGTH_SHORT).show();
                 return;
             }
@@ -49,8 +47,8 @@ public class AddStudentActivity extends Activity {
         });
     }
     int generateID(){
-        if(!students.isEmpty()){
-            return 2026000+students.get(students.size()-1).getStudentID();
+        if(!StudentRepository.getStudents().isEmpty()){
+            return 2026000+StudentRepository.getStudents().get(StudentRepository.getStudents().size()-1).getStudentID();
         }
         return 2026000;
     }

@@ -19,8 +19,15 @@ public class Student {
         this.studentID = studentID;
         this.status = status;
     }
-
-    int getStudentID(){
+    //getters
+    public int getStudentID(){
         return this.studentID;
     }
+    public String getFirst(){return this.first;}
+    public String getLast(){return this.last;}
+    public String getCourse(){return this.course;}
+    public int getAge(){return this.age;}
+    public int getYearLevel(){return this.yearLevel;}
+    public boolean getStatus(){return this.status;}
+
 }
