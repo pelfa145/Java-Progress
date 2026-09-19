@@ -2,8 +2,10 @@ package com.example.student_management;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.database.sqlite.SQLiteConstraintException;
 import android.os.Bundle;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Switch;
 import android.widget.Toast;
 
@@ -12,7 +14,6 @@ import com.google.android.material.textfield.TextInputEditText;
 public class AddStudentActivity extends Activity {
 
     StudentRepository repository;
-    static boolean successful;
 
     @Override
     protected void onCreate(Bundle savedInstance) {
@@ -31,34 +32,53 @@ public class AddStudentActivity extends Activity {
         btnAdd.setOnClickListener(v -> {
             String first = etFirst.getText().toString().trim();
             String last = etLast.getText().toString().trim();
-            int age = Integer.parseInt(etAge.getText().toString());
+            String initAge = etAge.getText().toString();
             String course = etCourse.getText().toString();
-            int yearLevel = Integer.parseInt(etYearLevel.getText().toString());
+            String initYearLevel = etYearLevel.getText().toString();
             boolean status = switchStatus.isChecked();
             //create a database first and then before adding into an arraylist or a hashmap even
-            int studentID = generateID();
+
             try {
-                StudentRepository.getStudents().add(new Student(first, last, course, age, yearLevel, studentID, status));
-            } catch (Exception e) {
-                Toast.makeText(this, "Failed to add student.", Toast.LENGTH_SHORT).show();
+                int studentID = generateID();
+                int age = Integer.parseInt(initAge);
+                int yearLevel = Integer.parseInt(initYearLevel);
+                repository = new StudentRepository(this);
+                long result = repository.addStudent(first, last, course, age, yearLevel, status, studentID);
+                if(result==-1){
+                    Toast.makeText(this, "Failed to add student.", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+            } catch (SQLiteConstraintException e) {
+                Toast.makeText(this, "Student ID already exists.", Toast.LENGTH_SHORT).show();
+                clearStatements(etAge, etFirst, etLast, etCourse, etYearLevel);
+                return;
+            } catch (NumberFormatException e) {
+                Toast.makeText(this, "Input a correct number on age or year level. (Ex. 1 or 18)", Toast.LENGTH_SHORT).show();
+                clearStatements(etAge, etFirst, etLast, etCourse, etYearLevel);
                 return;
             }
-
             Intent intent = new Intent(AddStudentActivity.this, MainActivity.class);
             startActivity(intent);
             Toast.makeText(this, "Successfully added " + first + "!", Toast.LENGTH_SHORT).show();
-            repository.addStudent(first, last, course, age, yearLevel, status, studentID);
+            startActivity(intent);
         });
-
-        repository = new StudentRepository(this);
-
 
     }
 
+    void clearStatements(TextInputEditText a, TextInputEditText b, TextInputEditText c, TextInputEditText d, TextInputEditText e){
+        a.setText("");
+        b.setText("");
+        c.setText("");
+        d.setText("");
+        e.setText("");
+    }
     int generateID() {
-        if (!StudentRepository.getStudents().isEmpty()) {
-            return 2026000 + StudentRepository.getStudents().get(StudentRepository.getStudents().size() - 1).getStudentID();
+        repository = new StudentRepository(this);
+        int id = repository.scanID();
+        if(id != -100){
+            return id + 1;
         }
         return 2026000;
+
     }
 }
