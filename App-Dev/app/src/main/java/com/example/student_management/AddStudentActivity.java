@@ -11,9 +11,11 @@ import com.google.android.material.textfield.TextInputEditText;
 
 public class AddStudentActivity extends Activity {
 
+    StudentRepository repository;
     static boolean successful;
+
     @Override
-    protected void onCreate(Bundle savedInstance){
+    protected void onCreate(Bundle savedInstance) {
         super.onCreate(savedInstance);
         setContentView(R.layout.activity_add_student);
 
@@ -35,20 +37,27 @@ public class AddStudentActivity extends Activity {
             boolean status = switchStatus.isChecked();
             //create a database first and then before adding into an arraylist or a hashmap even
             int studentID = generateID();
-            try{StudentRepository.getStudents().add(new Student(first,last, course, age, yearLevel, studentID, status));}catch(Exception e){
+            try {
+                StudentRepository.getStudents().add(new Student(first, last, course, age, yearLevel, studentID, status));
+            } catch (Exception e) {
                 Toast.makeText(this, "Failed to add student.", Toast.LENGTH_SHORT).show();
                 return;
             }
 
             Intent intent = new Intent(AddStudentActivity.this, MainActivity.class);
             startActivity(intent);
-            Toast.makeText(this, "Successfully added "+first+"!", Toast.LENGTH_SHORT).show();
-
+            Toast.makeText(this, "Successfully added " + first + "!", Toast.LENGTH_SHORT).show();
+            repository.addStudent(first, last, course, age, yearLevel, status, studentID);
         });
+
+        repository = new StudentRepository(this);
+
+
     }
-    int generateID(){
-        if(!StudentRepository.getStudents().isEmpty()){
-            return 2026000+StudentRepository.getStudents().get(StudentRepository.getStudents().size()-1).getStudentID();
+
+    int generateID() {
+        if (!StudentRepository.getStudents().isEmpty()) {
+            return 2026000 + StudentRepository.getStudents().get(StudentRepository.getStudents().size() - 1).getStudentID();
         }
         return 2026000;
     }

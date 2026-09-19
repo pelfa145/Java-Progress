@@ -21,7 +21,7 @@ public class DatabaseHelper extends SQLiteOpenHelper{
                 "last_name TEXT," +
                 "course TEXT," +
                 "year_level INTEGER," +
-                "status INTEGER NOT NULL DEFAULT 1 CHECK (is_active IN (0, 1))," +
+                "status INTEGER NOT NULL DEFAULT 1 CHECK (status IN (0, 1))," +
                 "age INTEGER);");
     }
 
@@ -30,5 +30,5 @@ public class DatabaseHelper extends SQLiteOpenHelper{
 
     }
 
-    public void getWritableDatabase
+
 }
