@@ -36,7 +36,6 @@ public class MainActivity extends AppCompatActivity {
         btnAddStudent.setOnClickListener(v-> {
         Intent intent = new Intent(MainActivity.this, AddStudentActivity.class);
         startActivity(intent);
-        updateTotalStudents(tvActiveStudents);
         });
         btnViewStudents.setOnClickListener(v -> {
         Intent intent = new Intent(this, ViewStudents.class);
@@ -56,11 +55,20 @@ public class MainActivity extends AppCompatActivity {
             return false;
         });
     }
+    @Override
+    protected void onResume(){
+        super.onResume();
 
-    public void setUpdateStudents(){
-
+        updateDashboard();
     }
-    public void updateTotalStudents(TextView tvActiveStudents){
-
+    public void updateDashboard(){
+        StudentRepository repository = new StudentRepository(this);
+        int[] result = repository.returnTotalAndActive();
+        if(result != null){
+            TextView a = findViewById(R.id.tvTotalStudents);
+            TextView b = findViewById(R.id.tvActiveStudents);
+            a.setText(String.valueOf(result[0]));
+            b.setText(String.valueOf(result[1]));
+        }
     }
 }

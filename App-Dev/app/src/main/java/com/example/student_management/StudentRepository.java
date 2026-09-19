@@ -49,22 +49,22 @@ public class StudentRepository {
         return -100;
     }
 
-    public long studentDashboardUpdate(TextView tvTotalStudents,  TextView tvActiveStudents){
+    public int[] returnTotalAndActive(){
         db = dbHelper.getReadableDatabase();
+        int activeStudents = -1;
+        int maxStudents = -1;
         Cursor cursor = db.rawQuery("SELECT MAX(id) AS amount_of_students FROM students", null);
         if(cursor.moveToFirst()){
             int columnIndex = cursor.getColumnIndex("amount_of_students");
-            int maxStudents = cursor.getInt(columnIndex);
-            tvTotalStudents.setText(maxStudents);
-        }
+            maxStudents = cursor.getInt(columnIndex);
+        }else{return null;}
         Cursor cursor1 = db.rawQuery("SELECT COUNT(*) FROM students WHERE status = 1", null);
-        if(cursor.moveToFirst()){
-            int activeStudents = cursor1.getInt(0);
-            tvActiveStudents.setText(activeStudents);
-        }
+        if(cursor1.moveToFirst()){
+            activeStudents = cursor1.getInt(0);
+        }else{return null;}
 
         cursor.close();
         cursor1.close();
-        return -100;
+        return new int[]{activeStudents, maxStudents};
     }
 }
