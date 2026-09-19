@@ -36,8 +36,7 @@ public class StudentRepository {
 
     public int scanID() {
         db = dbHelper.getReadableDatabase();
-        Cursor cursor = db.rawQuery("SELECT MAX(student_id) FROM students",
-                null);
+        Cursor cursor = db.rawQuery("SELECT MAX(student_id) FROM students", null);
         int maxId;
         if (cursor.moveToFirst()) {
             if (!cursor.isNull(0)) {
@@ -53,10 +52,9 @@ public class StudentRepository {
         db = dbHelper.getReadableDatabase();
         int activeStudents = -1;
         int maxStudents = -1;
-        Cursor cursor = db.rawQuery("SELECT MAX(id) AS amount_of_students FROM students", null);
+        Cursor cursor = db.rawQuery("SELECT COUNT(*) AS amount_of_students FROM students", null);
         if(cursor.moveToFirst()){
-            int columnIndex = cursor.getColumnIndex("amount_of_students");
-            maxStudents = cursor.getInt(columnIndex);
+            maxStudents = cursor.getInt(0);
         }else{return null;}
         Cursor cursor1 = db.rawQuery("SELECT COUNT(*) FROM students WHERE status = 1", null);
         if(cursor1.moveToFirst()){
@@ -65,6 +63,6 @@ public class StudentRepository {
 
         cursor.close();
         cursor1.close();
-        return new int[]{activeStudents, maxStudents};
+        return new int[]{maxStudents, activeStudents};
     }
 }

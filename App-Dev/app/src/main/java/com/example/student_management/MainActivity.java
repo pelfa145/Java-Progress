@@ -23,11 +23,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         //elements
-        TextView tvTotalStudents = findViewById(R.id.tvTotalStudents);
         CardView btnAddStudent = findViewById(R.id.btnAddStudent);
         CardView btnViewStudents = findViewById(R.id.btnViewStudents);
-        TextView tvActiveStudents = findViewById(R.id.tvActiveStudents);
-        TextView tvInactiveStudents = findViewById(R.id.tvInactiveStudents);
         BottomNavigationView bottomNavigation = findViewById(R.id.bottomNavigation);
         MenuItem homeItem = bottomNavigation.getMenu().findItem(R.id.nav_dashboard);
         MenuItem studentsItem = bottomNavigation.getMenu().findItem(R.id.nav_students);
@@ -52,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
             if(item.getItemId() == R.id.nav_settings){
 
             }
-            return false;
+            return true;
         });
     }
     @Override
@@ -72,3 +69,11 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 }
+
+/*
+1. Remove "View Students" from Quick Actions — redundant with Students nav.
+2. Fix the missing startActivity(intent) if you keep that button temporarily, but you're removing it anyway.
+3. Fix scanID() cursor closing.
+4. Implement getAllStudents() → Cursor → Student → ArrayList<Student>.
+5. Then RecyclerView Adapter.
+*/

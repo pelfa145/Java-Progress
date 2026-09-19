@@ -58,7 +58,6 @@ public class AddStudentActivity extends Activity {
                 return;
             }
             Intent intent = new Intent(AddStudentActivity.this, MainActivity.class);
-            startActivity(intent);
             Toast.makeText(this, "Successfully added " + first + "!", Toast.LENGTH_SHORT).show();
             startActivity(intent);
         });
