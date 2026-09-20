@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.StudentManagement">
         <activity
-            android:name=".LoginPage"
+            android:name=".ui.LoginPage"
             android:exported="true"
             android:windowSoftInputMode="adjustResize">
 
@@ -25,10 +25,10 @@
 
 
         </activity>
-        <activity android:name=".AddStudentActivity"
+        <activity android:name=".ui.AddStudentActivity"
             android:exported="false" />
-        <activity android:name=".ViewStudents" />
-        <activity android:name=".MainActivity" />
+        <activity android:name=".ui.ViewStudents" />
+        <activity android:name=".ui.MainActivity" />
 
     </application>
 

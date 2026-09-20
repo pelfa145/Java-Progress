@@ -1,6 +1,6 @@
 
 
-package com.example.student_management;
+package com.example.student_management.adapter;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,6 +11,9 @@ import java.util.ArrayList;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.student_management.R;
+import com.example.student_management.model.Student;
 
 public class StudentAdapter extends RecyclerView.Adapter<StudentAdapter.StudentViewHolder> {
     private ArrayList<Student> students;

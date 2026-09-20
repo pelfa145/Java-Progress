@@ -1,4 +1,4 @@
-package com.example.student_management;
+package com.example.student_management.data;
 
 import android.content.Context;
 import android.database.sqlite.*;
@@ -23,6 +23,13 @@ public class DatabaseHelper extends SQLiteOpenHelper{
                 "year_level INTEGER," +
                 "status INTEGER NOT NULL DEFAULT 1 CHECK (status IN (0, 1))," +
                 "age INTEGER);");
+
+        db.execSQL("CREATE TABLE accounts (" +
+                "id INTEGER PRIMARY KEY AUTOINCREMENT," +
+                "email TEXT UNIQUE NOT NULL," +
+                "password TEXT UNIQUE NOT NULL);");
+
+
     }
 
     @Override

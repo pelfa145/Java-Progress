@@ -1,4 +1,4 @@
-package com.example.student_management;
+package com.example.student_management.data;
 
 import java.util.ArrayList;
 
@@ -6,8 +6,8 @@ import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.*;
-import android.widget.TextView;
-import android.widget.Toast;
+
+import com.example.student_management.model.Student;
 
 public class StudentRepository {
 

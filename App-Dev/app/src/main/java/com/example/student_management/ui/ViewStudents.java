@@ -1,10 +1,15 @@
-package com.example.student_management;
+package com.example.student_management.ui;
 
 import android.app.Activity;
 import android.os.Bundle;
 
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.student_management.R;
+import com.example.student_management.adapter.StudentAdapter;
+import com.example.student_management.data.StudentRepository;
+import com.example.student_management.model.Student;
 
 import java.util.ArrayList;
 

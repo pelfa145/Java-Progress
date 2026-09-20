@@ -1,4 +1,4 @@
-package com.example.student_management;
+package com.example.student_management.ui;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -6,7 +6,8 @@ import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
-import android.database.sqlite.*;
+
+import com.example.student_management.R;
 
 
 public class LoginPage extends Activity {
@@ -33,9 +34,11 @@ public class LoginPage extends Activity {
                 startActivity(intent);
                 return;
             }
-
-            Toast.makeText(this, "Password or Email was wrong.", Toast.LENGTH_SHORT).show();
-            
+            if(email.isEmpty() || password.isEmpty()){
+                Toast.makeText(this, "Password or Email is empty", Toast.LENGTH_SHORT).show();
+            }else {
+                Toast.makeText(this, "Password or Email is wrong.", Toast.LENGTH_SHORT).show();
+            }
         });
     }
 

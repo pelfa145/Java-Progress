@@ -1,14 +1,14 @@
-package com.example.student_management;
+package com.example.student_management.ui;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.database.sqlite.SQLiteConstraintException;
 import android.os.Bundle;
 import android.widget.Button;
-import android.widget.EditText;
-import android.widget.Switch;
 import android.widget.Toast;
 
+import com.example.student_management.R;
+import com.example.student_management.data.StudentRepository;
 import com.google.android.material.materialswitch.MaterialSwitch;
 import com.google.android.material.textfield.TextInputEditText;
 
