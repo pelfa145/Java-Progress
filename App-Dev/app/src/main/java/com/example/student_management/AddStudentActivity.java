@@ -9,6 +9,7 @@ import android.widget.EditText;
 import android.widget.Switch;
 import android.widget.Toast;
 
+import com.google.android.material.materialswitch.MaterialSwitch;
 import com.google.android.material.textfield.TextInputEditText;
 
 public class AddStudentActivity extends Activity {
@@ -26,7 +27,7 @@ public class AddStudentActivity extends Activity {
         TextInputEditText etAge = findViewById(R.id.etAge);
         TextInputEditText etCourse = findViewById(R.id.etCourse);
         TextInputEditText etYearLevel = findViewById(R.id.YearLevel);
-        Switch switchStatus = findViewById(R.id.switchStatus);
+        MaterialSwitch switchStatus = findViewById(R.id.switchStatus);
         Button btnAdd = findViewById(R.id.btnAdd);
         //get
         btnAdd.setOnClickListener(v -> {

@@ -3,6 +3,11 @@ package com.example.student_management;
 import android.app.Activity;
 import android.os.Bundle;
 
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import java.util.ArrayList;
+
 public class ViewStudents extends Activity {
 
     @Override
@@ -10,5 +15,16 @@ public class ViewStudents extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_students);
 
+        RecyclerView recyclerView = findViewById(R.id.studentList);
+        StudentRepository repository = new StudentRepository(this);
+        ArrayList<Student> students = repository.returnArrayOfStudents();
+        StudentAdapter adapter = new StudentAdapter(students);
+        recyclerView.setAdapter(adapter);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+
     }
+
+
+
+
 }

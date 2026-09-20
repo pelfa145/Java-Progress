@@ -34,9 +34,9 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(MainActivity.this, AddStudentActivity.class);
         startActivity(intent);
         });
-        btnViewStudents.setOnClickListener(v -> {
-        Intent intent = new Intent(this, ViewStudents.class);
-        });
+//        btnViewStudents.setOnClickListener(v -> {
+//        Intent intent = new Intent(this, ViewStudents.class);
+//        });
 
         bottomNavigation.setOnItemSelectedListener(item -> {
             if(item.getItemId() == R.id.nav_students){
@@ -64,8 +64,10 @@ public class MainActivity extends AppCompatActivity {
         if(result != null){
             TextView a = findViewById(R.id.tvTotalStudents);
             TextView b = findViewById(R.id.tvActiveStudents);
+            TextView c = findViewById(R.id.tvStudentGrowth);
             a.setText(String.valueOf(result[0]));
             b.setText(String.valueOf(result[1]));
+            c.setText(result[0] + " students has been added recently.");
         }
     }
 }

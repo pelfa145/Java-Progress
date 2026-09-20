@@ -65,4 +65,28 @@ public class StudentRepository {
         cursor1.close();
         return new int[]{maxStudents, activeStudents};
     }
+
+    public ArrayList<Student> returnArrayOfStudents(){
+        ArrayList<Student> students = new ArrayList<>();
+        db = dbHelper.getReadableDatabase();
+        Cursor cursor = db.rawQuery("SELECT * FROM students",null);
+
+        if(cursor.moveToFirst()){
+            do{
+                String first = cursor.getString(cursor.getColumnIndexOrThrow("first_name"));
+                String last = cursor.getString(cursor.getColumnIndexOrThrow("last_name"));
+                String course = cursor.getString(cursor.getColumnIndexOrThrow("course"));
+                int age = cursor.getInt(cursor.getColumnIndexOrThrow("age"));
+                int yearLevel = cursor.getInt(cursor.getColumnIndexOrThrow("year_level"));
+                int studentID = cursor.getInt(cursor.getColumnIndexOrThrow("student_id"));
+                int initStatus = cursor.getInt(cursor.getColumnIndexOrThrow("status"));
+                boolean status;
+                status = initStatus == 1;
+                students.add(new Student(first, last, course, age, yearLevel, studentID, status));
+            }while(cursor.moveToNext());
+        }
+
+        cursor.close();
+        return students;
+    }
 }
