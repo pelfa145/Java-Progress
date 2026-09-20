@@ -1,5 +1,6 @@
 package com.example.roastapp;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 
@@ -19,6 +20,16 @@ public class MainActivity extends AppCompatActivity {
             Button btnRegister = findViewById(R.id.myButton);
             Button btnLogin = findViewById(R.id.myButton2);
 
+            btnRegister.setOnClickListener(v -> {
+                Intent intent = new Intent(this, RegistrationPage.class);
+                startActivity(intent);
+                finish();
+            });
 
+            btnLogin.setOnClickListener(v -> {
+                Intent intent = new Intent(this, LoginPage.class);
+                startActivity(intent);
+                finish();
+            });
         }
 }
