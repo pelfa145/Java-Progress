@@ -21,7 +21,7 @@ public class LoginPage extends Activity {
         Button btnLogin = findViewById(R.id.btnLogin);
 
         AccountRepository repository = new AccountRepository(this);
-        ArrayList<UserAccount> users = new ArrayList<>();
+        ArrayList<UserAccount> users = repository.returnAccounts();
         Intent intent = new Intent(this, MainActivityPage.class);
 
         btnLogin.setOnClickListener(v -> {
@@ -29,13 +29,12 @@ public class LoginPage extends Activity {
             String inputtedPassword = etPassword.getText().toString();
             if(isAnAccount(inputtedEmail, users)){
                 login(inputtedEmail, inputtedPassword, users, intent);
-                Toast.makeText(this, "Email or password is wrong.", Toast.LENGTH_SHORT).show();
+                finish();
             }
             etEmail.setText("");
             etPassword.setText("");
             Toast.makeText(this, "No account with that email was found.", Toast.LENGTH_SHORT).show();
         });
-
 
     }
 
