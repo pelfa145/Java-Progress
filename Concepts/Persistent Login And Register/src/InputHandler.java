@@ -17,5 +17,5 @@ public class InputHandler{
         input.nextLine();
         return integer;
     }
-    
+
 }
